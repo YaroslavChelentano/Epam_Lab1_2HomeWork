@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{492161F4-A2A5-4860-BC6A-F113783E497C}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Yaroslav_Andreiev_Epam_Lab1_2_HW</RootNamespace>
+    <AssemblyName>Yaroslav_Andreiev_Epam_Lab1_2_HW</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MainClass.cs" />
+    <Compile Include="Menu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\2Task1\2Task1.csproj">
+      <Project>{fd41853b-17cd-44e9-bac1-114346ad6d79}</Project>
+      <Name>2Task1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\2Task2\2Task2.csproj">
+      <Project>{1226bd86-2e62-4115-98d9-ce208dac8b90}</Project>
+      <Name>2Task2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\2Task3\2Task3.csproj">
+      <Project>{be55420f-1d95-4d19-a490-c9727a32530c}</Project>
+      <Name>2Task3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\2Task4\2Task4.csproj">
+      <Project>{9ebdc274-7539-45d5-8087-c25f834e36bd}</Project>
+      <Name>2Task4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Rectangle_Auto_Implemented\Task2.csproj">
+      <Project>{58805620-eb95-4a23-aa26-db76ed225f44}</Project>
+      <Name>Task2</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task1\Task1.csproj">
+      <Project>{8bb28d33-7849-4c80-ba10-ff55b27348ec}</Project>
+      <Name>Task1</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task3\Task3.csproj">
+      <Project>{5e590c4e-c6a3-430d-af8a-3fde709ca5ab}</Project>
+      <Name>Task3</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task4\Task4.csproj">
+      <Project>{c6aee9b0-2135-43e5-a3d4-805014938024}</Project>
+      <Name>Task4</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Task5\Task5.csproj">
+      <Project>{d49c5086-de27-438d-aaa6-530bf1b4deb5}</Project>
+      <Name>Task5</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
