@@ -17,21 +17,7 @@ namespace Lab1_2_NET_Epam
     {
         public static void Main(string[] args)
         {
-            List<string> randomList = new List<string>();
-            randomList = RandomList.DeleteZ();
-            randomList.Sort();
-            randomList.Reverse();
-            foreach (string element in randomList)
-            {
-                Console.WriteLine(element);
-            }
-            List<Person> newList = new List<Person>();
-            CreateDisplayPerson create = new CreateDisplayPerson(newList);
-            AddRangePerson add = new AddRangePerson(newList);
-            create.CreateSomePerson();
-            create.DisplayPerson();
-            add.AddTwoPerson();
-            add.DisplayPhoneNumbers();
+
             Menu menu = new Menu();
             menu.ChooseAction();
             int choice = int.Parse(Console.ReadLine());
@@ -183,7 +169,29 @@ namespace Lab1_2_NET_Epam
                     FigureDraw figuretoDraw = new FigureDraw(2, 3);
                     RectangleDraw rectangleDraw = new RectangleDraw(2, 3);
                     figuretoDraw.DrawAll(figuretoDraw, rectangleDraw);
+                    //   Lab#3Task1
+                    Console.WriteLine("\t Lab 3: ");
+                    Console.WriteLine("Task 1: ");
+                    List<Person> newList = new List<Person>();
+                    CreateDisplayPerson create = new CreateDisplayPerson(newList);
+                    create.CreateSomePerson();
+                    create.DisplayPerson();
+                    //   Lab#3Task2 
+                    Console.WriteLine("Task 2: ");
+                    AddRangePerson add = new AddRangePerson(newList);
+                    add.AddTwoPerson();
+                    add.DisplayPhoneNumbers();
+                    //   Lab#3Task3
+                    List<string> randomList = new List<string>();
+                    randomList = RandomList.DeleteZ();
+                    randomList.Sort();
+                    randomList.Reverse();
+                    foreach (string element in randomList)
+                    {
+                        Console.WriteLine(element);
+                    }
                     break;
+                    
                 default:
                     Console.WriteLine("Choose 1 or 2 variant");
                     break;
