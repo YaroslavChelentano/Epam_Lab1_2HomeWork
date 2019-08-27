@@ -173,9 +173,9 @@ namespace Lab1_2_NET_Epam
                     //  Lab#1Task5
                     Console.WriteLine("Task 5: ");
                     ComplexNumber num1 = new ComplexNumber(1, 1);
-                    ComplexNumber num2 = new ComplexNumber(2, 3);
+                    ComplexNumber num2 = new ComplexNumber(1, 3);
                     Console.WriteLine(num1 * num2);
-                    Console.WriteLine(num2 / num2);
+                    Console.WriteLine(num1 / num2);
                     Console.WriteLine("\t Lab 2: ");
                     //  Lab#2Task1
                     Console.WriteLine("Task 1: ");
