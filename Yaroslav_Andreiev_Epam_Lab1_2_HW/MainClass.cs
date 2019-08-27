@@ -18,8 +18,11 @@ namespace Lab1_2_NET_Epam
         {
             List<Person> newList = new List<Person>();
             CreateDisplayPerson create = new CreateDisplayPerson(newList);
+            AddRangePerson add = new AddRangePerson(newList);
             create.CreateSomePerson();
             create.DisplayPerson();
+            add.AddTwoPerson();
+            add.DisplayPhoneNumbers();
             Menu menu = new Menu();
             menu.ChooseAction();
             int choice = int.Parse(Console.ReadLine());

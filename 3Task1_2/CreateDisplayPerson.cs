@@ -28,5 +28,26 @@ namespace lab3task1_2_3
             }
         }
     }
+    public class AddRangePerson : CreateDisplayPerson
+    {
+        protected List<Person> newList2 = new List<Person>() { new Person() { Name = "Oleksandr", PhoneNumbers = new string[] { "090453467323", "096453434842", "0964536234523" }, Age = 36 } ,
+           new Person() {Name = "Olena" , PhoneNumbers = new string[] {"0905435355325" , "22243534556" , "093456436363" } , Age = 22 } };
+        public AddRangePerson(List<Person> newList) : base(newList)
+        {
+        }
+        public List<Person> AddTwoPerson()
+        {
+            newList.AddRange(newList2);
+            return newList;
+        }
+        public void DisplayPhoneNumbers()
+        {
+            for (int i = 0; i < newList.Count; i++)
+            {
+                Console.Write($" Name : {newList[i].Name} ");
+                for (int j = 0; j < ((string[])newList[i].PhoneNumbers).Length; j++)
+                    Console.WriteLine($" PhoneNumber: {((string[])newList[i].PhoneNumbers)[j]} ");
+            }
+        }
+    }
 }
-
