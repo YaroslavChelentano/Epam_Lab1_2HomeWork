@@ -107,6 +107,38 @@ namespace Lab1_2_NET_Epam
                         RectangleDraw rectangleDraw1 = new RectangleDraw(2, 3);
                         figuretoDraw1.DrawAll(figuretoDraw1, rectangleDraw1);
                     }
+                    if (choiceLab == 3)
+                    {
+                        //   Lab#3Task1
+                        Console.WriteLine("\t Lab 3: ");
+                        Console.WriteLine("Task 1: ");
+                        List<Person> newList1 = new List<Person>();
+                        CreateDisplayPerson create1 = new CreateDisplayPerson(newList1);
+                        create1.CreateSomePerson();
+                        create1.DisplayPerson();
+                        //   Lab#3Task2 
+                        Console.WriteLine("Task 2: ");
+                        AddRangePerson add1 = new AddRangePerson(newList1);
+                        add1.AddTwoPerson();
+                        add1.DisplayPhoneNumbers();
+                        //   Lab#3Task3
+                        Console.WriteLine("Task 3: ");
+                        RandomList randomList1= new RandomList();
+                        Console.Write("Enter number of Page: ");
+                        string numberPage1 = Console.ReadLine();
+                        int number1;
+                        bool success1 = Int32.TryParse(numberPage1, out number1);
+                        if (success1)
+                        {
+                            number1 = Int32.Parse(numberPage1);
+                            randomList1.DisplayPage(number1);
+                        }
+                        else
+                        {
+                            Console.WriteLine("Please enter number as digit");
+                            break;
+                        }
+                    }
                     break;
                 case 2:
                     Console.WriteLine("\tLab 1: ");
@@ -182,13 +214,21 @@ namespace Lab1_2_NET_Epam
                     add.AddTwoPerson();
                     add.DisplayPhoneNumbers();
                     //   Lab#3Task3
-                    List<string> randomList = new List<string>();
-                    randomList = RandomList.DeleteZ();
-                    randomList.Sort();
-                    randomList.Reverse();
-                    foreach (string element in randomList)
+                    Console.WriteLine("Task 3: ");
+                    RandomList randomList = new RandomList();
+                    Console.Write("Enter number of Page: ");
+                    string numberPage = Console.ReadLine();
+                    int number;
+                    bool success = Int32.TryParse(numberPage, out number);
+                    if (success)
                     {
-                        Console.WriteLine(element);
+                        number = Int32.Parse(numberPage);
+                        randomList.DisplayPage(number);
+                    }
+                    else
+                    {
+                        Console.WriteLine("Please enter number as digit");
+                        break;
                     }
                     break;
                     
@@ -196,57 +236,6 @@ namespace Lab1_2_NET_Epam
                     Console.WriteLine("Choose 1 or 2 variant");
                     break;
             }
-
-            /*
-            // Lab#1Task1
-            Rectangle myRectangle = new Rectangle(0, 1, -1, -2);
-            Console.WriteLine(myRectangle.square());
-            Console.WriteLine(myRectangle.perimeter());
-            // Lab#1Task2
-            Rectangle_Auto_Implemented myRectangleAuto = new
-            Rectangle_Auto_Implemented();
-            myRectangleAuto.leftTopX = 0;
-            myRectangleAuto.leftTopY = 1;
-            myRectangleAuto.rightDownX = -1;
-            myRectangleAuto.rightDownY = -2;
-
-            Console.WriteLine(myRectangleAuto.GetPerimeter);
-            Console.WriteLine(myRectangleAuto.GetSquare);
-
-            //  Lab#1Task3
-            Circle myCircle = new Circle();
-            Console.WriteLine(myCircle.length(2));
-            Console.WriteLine(myCircle.square(3));
-            //  Lab#1Task4
-            Console.WriteLine(StatRectangle.perimeter(0, 1, -1, -2));
-            Console.WriteLine(StatRectangle.square(0, 1, -1, -2));
-            Console.WriteLine(StatCircle.length(2));
-            Console.WriteLine(StatCircle.square(3));
-            //  Lab#1Task5
-            ComplexNumber num1 = new ComplexNumber(1, 1);
-            ComplexNumber num2 = new ComplexNumber(2, 3);
-            Console.WriteLine(num1 * num2);
-            Console.WriteLine(num2 / num2);
-            //  Lab#2Task1
-            RectangleFigure rect = new RectangleFigure();
-            rect.Draw();
-            SquareFigure square = new SquareFigure();
-            square.Draw();
-            //  Lab#2Task2
-            RectangleReadOnly rectangleRead = new RectangleReadOnly(2, 3);
-            SquareReadOnly squareRead = new SquareReadOnly(2, 3);
-            //  Lab#2Task3
-            FigureVirtual figure = new FigureVirtual(2, 3);
-            figure.Draw();
-            FigureVirtual newfigure1 = new RectangleVirtual(2, 3);
-            newfigure1.Draw();
-            FigureVirtual newfigure2 = new SquareVirtual(2, 3);
-            newfigure2.Draw();
-            //   Lab#2Task4
-            FigureDraw figuretoDraw = new FigureDraw(2, 3);
-            RectangleDraw rectangleDraw = new RectangleDraw(2, 3);
-            figuretoDraw.DrawAll(figuretoDraw , rectangleDraw);
-            */
         }
     }
 }

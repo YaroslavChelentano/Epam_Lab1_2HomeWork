@@ -34,6 +34,7 @@ namespace Lab1_2_NET_Epam
             Console.WriteLine("Choose Lab :");
             Console.WriteLine("1. Lab 1");
             Console.WriteLine("2. Lab 2");
+            Console.WriteLine("3. Lab 3");
         }
 
         public void Bye()

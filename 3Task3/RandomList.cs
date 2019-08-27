@@ -19,6 +19,7 @@ namespace lab3task3
                 randomArray[i] = result;
             }
             randomList.AddRange(randomArray);
+            Console.WriteLine($"Count of elements before transformation: {randomList.Count}");
             return randomList;
         }
 
@@ -28,10 +29,12 @@ namespace lab3task3
             List<string> uniqueRandomList = new List<string>();
             var hs = new HashSet<string>();
             foreach (string element in RandomList.GetRandomList())
+            {
                 if (hs.Add(element))
                 {
                     uniqueRandomList.Add(element);
                 }
+            }
             for (int i = 0; i < uniqueRandomList.Count; i++)
             {
                 if (uniqueRandomList[i][0].ToString() == z)
@@ -40,6 +43,28 @@ namespace lab3task3
                 }
             }
             return uniqueRandomList;
+        }
+        public void DisplayPage(int PageNumber)
+        {
+            List<string> result = new List<string>();
+            result = RandomList.DeleteZ();
+            result.Sort();
+            result.Reverse();
+            Console.WriteLine($"Count of elements after transformation : {result.Count} ");
+            int index = PageNumber * 5;
+            int lastpage = index + 5;
+            try
+            {
+                while (index < lastpage)
+                {
+                    Console.WriteLine(result[index]);
+                    index++;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
     }
 }
