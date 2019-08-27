@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace lab3task3
+namespace lab3task1_2_3
 {
     public class Person
     {

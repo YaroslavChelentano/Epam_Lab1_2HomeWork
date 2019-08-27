@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using lab1task1;
 using lab1task2;
 using lab1task3;
@@ -8,12 +9,17 @@ using lab2task1;
 using lab2task2;
 using lab2task3;
 using lab2task4;
+using lab3task1_2_3;
 namespace Lab1_2_NET_Epam
 {
     class MainClass
     {
         public static void Main(string[] args)
         {
+            List<Person> newList = new List<Person>();
+            CreateDisplayPerson create = new CreateDisplayPerson(newList);
+            create.CreateSomePerson();
+            create.DisplayPerson();
             Menu menu = new Menu();
             menu.ChooseAction();
             int choice = int.Parse(Console.ReadLine());

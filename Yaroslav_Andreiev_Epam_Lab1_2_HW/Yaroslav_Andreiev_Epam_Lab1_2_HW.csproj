@@ -67,6 +67,10 @@
       <Project>{9ebdc274-7539-45d5-8087-c25f834e36bd}</Project>
       <Name>2Task4</Name>
     </ProjectReference>
+    <ProjectReference Include="..\3Task1_2\3Task1_2.csproj">
+      <Project>{de8f003f-cda5-4cbb-b91c-a25480f21414}</Project>
+      <Name>3Task1_2</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Rectangle_Auto_Implemented\Task2.csproj">
       <Project>{58805620-eb95-4a23-aa26-db76ed225f44}</Project>
       <Name>Task2</Name>
